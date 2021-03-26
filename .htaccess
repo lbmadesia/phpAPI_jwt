@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^authkey$ generateAuthKey.php
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^signup$ registerNewUser.php
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^login$ loginUser.php
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^finduser$ getUserByUsername.php
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^resetPassword$ updateUserPassword.php
